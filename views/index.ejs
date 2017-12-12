@@ -9,11 +9,10 @@
                 <% blogs.forEach((blog) => { %>
                     <div class="item">
                         <div class="image">
-                            <img src="<%= blog.image %>">
+                            <img src="<%=blog.image%>">
                         </div>
                         <div class="content">
-                            <a class="header" href="/blogs/
-                            <%= blog._id%>">
+                            <a class="header" href="/blogs/<%=blog._id%>">
                                 <%= blog.title %>
                             </a>
                             <div class="meta">
@@ -27,7 +26,7 @@
                                 </p>
                             </div>
                             <div class="extra">
-                                <a class="ui floated basic black button" href="/blogs/<%= blog._id%>">
+                                <a class="ui floated basic black button" href="/blogs/<%=blog._id%>">
                                     Read More
                                     <i class="right chevron icon"></i>
                                 </a>
