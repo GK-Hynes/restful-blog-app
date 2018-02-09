@@ -6,9 +6,11 @@ const methodOverride = require("method-override");
 const expressSanitizer = require("express-sanitizer");
 
 // APP CONFIG
-mongoose.connect("mongodb://localhost/restful_blog_app");
+mongoose.connect("mongodb://localhost/restful_blog_app", {
+  useMongoClient: true
+});
 app.set("view engine", "ejs");
-app.use(express.static("public"));
+app.use(express.static(__dirname + "public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.use(expressSanitizer());
